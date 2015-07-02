@@ -18,8 +18,6 @@ package com.yahoo.storm.perftest;
 
 import java.util.Map;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
@@ -38,9 +36,11 @@ import backtype.storm.generated.TopologySummary;
 import backtype.storm.generated.TopologyInfo;
 import backtype.storm.generated.ExecutorSummary;
 import backtype.storm.generated.ExecutorStats;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
-  private static final Log LOG = LogFactory.getLog(Main.class);
+  private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 
   @Option(name="--help", aliases={"-h"}, usage="print help message")
   private boolean _help = false;
